@@ -5,8 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable, :lockable, :invitable
 
+  has_one :profile
+
   def send_devise_notification(notification, *args)
-    devise_mailer.send(notification, self, *args).deliver_later
+    if Rails.env.development?
+      devise_mailer.send(notification, self, *args).deliver_now
+    else
+      devise_mailer.send(notification, self, *args).deliver_later
+    end
   end
 
 end

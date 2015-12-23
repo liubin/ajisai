@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'profile' => 'profile#show'
+  get 'profile/edit'
+  match 'profile/update', :via => ['post']
+  match 'profile/avatar', :via => ['post', 'get']
+
   get 'dash/index'
 
   devise_for :users
