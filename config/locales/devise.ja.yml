@@ -58,10 +58,20 @@ ja:
     mailer:
       confirmation_instructions:
         subject: "アカウントの有効化について"
+        welcome: 'ようこそ %{email} ！'
+        explain: 'あなたは、以下のリンクからアカウントのメールを確認することができます。'
+        confirm_my_account: 'アカウントの確認'
       reset_password_instructions:
         subject: "パスワードの再設定について"
+        explain_1: '誰かがあなたのパスワードを変更するためのリンクを要求しています。あなたは下のリンクを介してこれを行うことができます。'
+        explain_2: "<p>あなたがこれを要求しなかった場合は、このメールを無視してください。</p><p>あなたのパスワードは、上記のリンクにアクセスするまで変更し、新しいものを作成しません。</p>"
+        change_my_password: 'パスワードを変更します'
+        hello: 'こんにちは %{email} ！'
       unlock_instructions:
         subject: "アカウントの凍結解除について"
+        hello: 'こんにちは %{email} ！'
+        unlock_my_account: 'アカウントのロックを解除します'
+        explain: '<p>ログイン失敗した試みが限度を超えたため、アカウントがロックされています。</p><p>あなたのアカウントのロックを解除するには、以下のリンクをクリックしてください：</p>'
     omniauth_callbacks:
       failure: "%{kind} アカウントによる認証に失敗しました。理由：（%{reason}）"
       success: "%{kind} アカウントによる認証に成功しました。"

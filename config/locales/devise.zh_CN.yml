@@ -63,10 +63,20 @@ zh_CN:
     mailer:
       confirmation_instructions:
         subject: "确认信息"
+        welcome: '欢迎您 %{email} ！'
+        explain: '欢迎您注册我们的网站，您可以通过下面的连接以继续注册，以确认您的注册请求：'
+        confirm_my_account: '确认账号'
       reset_password_instructions:
         subject: "重置密码信息"
+        explain_1: '您已申请了重设密码操作，您可以通过下面的链接来继续完成此操作。'
+        explain_2: "<p>如果本操作并非您本人发起，请忽略此邮件。</p><p>只有您点击下面的链接并且设置一个新的密码之后，您的密码重置工作才算完成。</p>"
+        change_my_password: '修改密码'
+        hello: '%{email} 您好！'
       unlock_instructions:
         subject: "解锁信息"
+        hello: '%{email} 您好！'
+        unlock_my_account: '解除锁定'
+        explain: '<p>由于您已经超过了指定的登录失败次数，您的账号已经被锁定。</p><p>点击下面的链接解除锁定：</p>'
     omniauth_callbacks:
       failure: "因为%{reason}，所以您无法从%{kind}获得授权。"
       success: "成功地从%{kind}获得授权。"

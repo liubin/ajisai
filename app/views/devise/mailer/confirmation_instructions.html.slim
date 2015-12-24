@@ -1,8 +1,8 @@
 p
-  | Welcome 
-  = @email
-  | !
+  = t('devise.mailer.confirmation_instructions.welcome', email: @resource.email)
+
 p
-  | You can confirm your account email through the link below:
+  = t 'devise.mailer.confirmation_instructions.explain'
+
 p
-  = link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
+  = link_to t('devise.mailer.confirmation_instructions.confirm_my_account'), confirmation_url(@resource, confirmation_token: @token)
